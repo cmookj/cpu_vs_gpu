@@ -7,7 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C2060FA275430D000C403AA /* random_image.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2060F9275430D000C403AA /* random_image.swift */; };
+		8C2060FC2754310500C403AA /* stopwatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2060FB2754310500C403AA /* stopwatch.swift */; };
+		8C2060FE2754312B00C403AA /* helper_function.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2060FD2754312B00C403AA /* helper_function.swift */; };
+		8C206100275431A000C403AA /* metal_types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2060FF275431A000C403AA /* metal_types.swift */; };
+		8C206102275431D900C403AA /* metal_processors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C206101275431D900C403AA /* metal_processors.swift */; };
+		8C2061042754321700C403AA /* file_interface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C2061032754321700C403AA /* file_interface.swift */; };
 		8CADECC0268C8E6800C04F6C /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CADECBF268C8E6800C04F6C /* main.swift */; };
+		8CADECC7268C914A00C04F6C /* compute.metal in Sources */ = {isa = PBXBuildFile; fileRef = 8CADECC6268C914A00C04F6C /* compute.metal */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -23,8 +30,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		8C2060F9275430D000C403AA /* random_image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = random_image.swift; sourceTree = "<group>"; };
+		8C2060FB2754310500C403AA /* stopwatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = stopwatch.swift; sourceTree = "<group>"; };
+		8C2060FD2754312B00C403AA /* helper_function.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = helper_function.swift; sourceTree = "<group>"; };
+		8C2060FF275431A000C403AA /* metal_types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metal_types.swift; sourceTree = "<group>"; };
+		8C206101275431D900C403AA /* metal_processors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = metal_processors.swift; sourceTree = "<group>"; };
+		8C2061032754321700C403AA /* file_interface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = file_interface.swift; sourceTree = "<group>"; };
 		8CADECBC268C8E6800C04F6C /* AddCompute */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = AddCompute; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CADECBF268C8E6800C04F6C /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		8CADECC6268C914A00C04F6C /* compute.metal */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.metal; path = compute.metal; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,7 +55,7 @@
 		8CADECB3268C8E6800C04F6C = {
 			isa = PBXGroup;
 			children = (
-				8CADECBE268C8E6800C04F6C /* AddCompute */,
+				8CADECBE268C8E6800C04F6C /* cpu_vs_gpu */,
 				8CADECBD268C8E6800C04F6C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,12 +68,19 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		8CADECBE268C8E6800C04F6C /* AddCompute */ = {
+		8CADECBE268C8E6800C04F6C /* cpu_vs_gpu */ = {
 			isa = PBXGroup;
 			children = (
 				8CADECBF268C8E6800C04F6C /* main.swift */,
+				8C2061032754321700C403AA /* file_interface.swift */,
+				8C206101275431D900C403AA /* metal_processors.swift */,
+				8C2060FF275431A000C403AA /* metal_types.swift */,
+				8C2060FD2754312B00C403AA /* helper_function.swift */,
+				8C2060FB2754310500C403AA /* stopwatch.swift */,
+				8C2060F9275430D000C403AA /* random_image.swift */,
+				8CADECC6268C914A00C04F6C /* compute.metal */,
 			);
-			path = AddCompute;
+			path = cpu_vs_gpu;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -89,14 +110,14 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1250;
-				LastUpgradeCheck = 1250;
+				LastUpgradeCheck = 1300;
 				TargetAttributes = {
 					8CADECBB268C8E6800C04F6C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
 				};
 			};
-			buildConfigurationList = 8CADECB7268C8E6800C04F6C /* Build configuration list for PBXProject "AddCompute" */;
+			buildConfigurationList = 8CADECB7268C8E6800C04F6C /* Build configuration list for PBXProject "cpu_vs_gpu" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -119,7 +140,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8C2060FA275430D000C403AA /* random_image.swift in Sources */,
+				8C2061042754321700C403AA /* file_interface.swift in Sources */,
+				8C206100275431A000C403AA /* metal_types.swift in Sources */,
+				8C206102275431D900C403AA /* metal_processors.swift in Sources */,
+				8C2060FE2754312B00C403AA /* helper_function.swift in Sources */,
 				8CADECC0268C8E6800C04F6C /* main.swift in Sources */,
+				8CADECC7268C914A00C04F6C /* compute.metal in Sources */,
+				8C2060FC2754310500C403AA /* stopwatch.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,6 +272,7 @@
 		8CADECC4268C8E6800C04F6C /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJMW65YB82;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -255,6 +284,7 @@
 		8CADECC5268C8E6800C04F6C /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = PJMW65YB82;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -266,7 +296,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		8CADECB7268C8E6800C04F6C /* Build configuration list for PBXProject "AddCompute" */ = {
+		8CADECB7268C8E6800C04F6C /* Build configuration list for PBXProject "cpu_vs_gpu" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				8CADECC1268C8E6800C04F6C /* Debug */,
